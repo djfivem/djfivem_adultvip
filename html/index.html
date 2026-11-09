@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DJ ERP MENU · Diesel Dev Shack</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect rx='8' width='32' height='32' fill='%232f7bff'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='16' fill='white' font-family='sans-serif'%3ED%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app" class="app is-hidden" aria-label="DJ ERP Menu">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" class="crown">
+                        <path d="M8 26 L18 18 L24 28 L32 10 L40 28 L46 18 L56 26 L52 48 H12 Z"></path>
+                        <path d="M16 52 H48" class="crown-line"></path>
+                    </svg>
+                    <span>D</span>
+                </div>
+                <div class="brand-copy">
+                    <strong>DIESEL DEV SHACK</strong>
+                    <em>DJ ERP MENU</em>
+                </div>
+            </div>
+            <nav id="nav" class="nav" aria-label="Menu"></nav>
+            <div class="sidebar-foot">
+                <img src="assets/brand-mark.webp" alt="Diesel Dev Shack">
+                <p>Premium · Private · Immersive</p>
+            </div>
+        </aside>
+
+        <main class="stage">
+            <header class="top">
+                <div>
+                    <p class="kicker" id="kicker">Diesel Dev Shack</p>
+                    <h1 id="title">DJ ERP MENU</h1>
+                    <p class="subtitle" id="subtitle"></p>
+                </div>
+                <label class="search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20 L16.5 16.5"></path></svg>
+                    <input id="search" type="search" placeholder="Search animations..." autocomplete="off" spellcheck="false">
+                </label>
+                <button id="close" class="power" type="button" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24"><path d="M12 3 V12"></path><path d="M6.5 6.5 A8 8 0 1 0 17.5 6.5"></path></svg>
+                </button>
+            </header>
+            <div id="status" class="status is-hidden"></div>
+            <div id="categories" class="categories"></div>
+            <section id="grid" class="grid" aria-live="polite"></section>
+            <section id="panel" class="panel is-hidden"></section>
+        </main>
+
+        <aside class="rail">
+            <section class="profile" id="profile"></section>
+            <section class="selection" id="selection">
+                <h2>Selected</h2>
+                <p class="empty-copy">Choose an animation.</p>
+            </section>
+            <section class="players">
+                <div class="section-head">
+                    <h2>Nearby Players</h2>
+                    <button id="refresh-players" type="button">Refresh</button>
+                </div>
+                <div id="player-list" class="player-list"></div>
+            </section>
+            <section class="request" id="request">
+                <h2>Interaction Request</h2>
+                <p class="empty-copy">No pending request.</p>
+            </section>
+        </aside>
+
+        <footer class="keybar">
+            <div class="keys" id="keys"></div>
+            <div class="role-pill" id="role-pill">Discord role required</div>
+            <div class="keybar-brand">DJ ERP MENU</div>
+        </footer>
+    </div>
+
+    <div id="overlay" class="overlay is-hidden" role="dialog" aria-modal="true" aria-labelledby="overlay-title"></div>
+    <div id="hint" class="hint is-hidden"></div>
+    <div id="toast" class="toast is-hidden" role="status"></div>
+
+    <script src="js/preview-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

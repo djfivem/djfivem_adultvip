@@ -1,8 +1,8 @@
 # DJ ERP MENU
 
-Diesel Dev Shack paired roleplay menu for FiveM. Players with a configured Discord role browse RPEmotes clips, invite a nearby player, and both animations start only after that player accepts.
+Phoenikera RP paired roleplay menu for FiveM, built by Diesel Dev Shack. Players with a configured Discord role browse RPEmotes clips, invite a nearby player, and both animations start only after that player accepts.
 
-The menu title is **DJ ERP MENU**. VIP access is the Discord role gate, not a separate reputation system.
+The menu title is **DJ ERP MENU**. The server mark is Phoenikera RP: black, sunset orange, gold, and desert purple. VIP access is the Discord role gate. Change `Config.Branding` if this copy is used on another community.
 
 This build was checked against [rpemotes-reborn 2.2.0](https://github.com/alberttheprince/rpemotes-reborn) (`6eb7546`). It does not invent emote names. On start, the server reads `client/AnimationList.lua` and `client/AnimationListCustom.lua` from the running RPEmotes resource and hides any configured id that is not in those files.
 

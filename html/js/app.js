@@ -286,9 +286,10 @@
             return;
         }
         if (state.view === 'about') {
-            panel.innerHTML = '<div class="about-hero"><img src="assets/brand-mark.webp" alt="Diesel Dev Shack logo"><div>' +
-                '<p class="kicker">Diesel Dev Shack</p><h2>DJ ERP MENU</h2>' +
-                '<p>Paired roleplay interactions for adult servers. RPEmotes plays the clips. This menu only offers identifiers that resource actually has, and only after the other player accepts.</p>' +
+            const studio = state.settings.studio || 'Phoenikera RP';
+            panel.innerHTML = '<div class="about-hero"><img src="assets/brand-mark.webp" alt="' + escapeHtml(studio) + ' logo"><div>' +
+                '<p class="kicker">' + escapeHtml(studio) + '</p><h2>' + escapeHtml(state.settings.title || 'DJ ERP MENU') + '</h2>' +
+                '<p>Paired roleplay interactions for Phoenikera RP. RPEmotes plays the clips. This menu only offers identifiers that resource actually has, and only after the other player accepts.</p>' +
                 '<p class="help">For 18+ communities. Access depends on the configured Discord role unless an admin bypass is granted.</p></div></div>';
             return;
         }
@@ -362,7 +363,11 @@
         const kicker = document.getElementById('kicker');
         title.textContent = state.settings.title || 'DJ ERP MENU';
         subtitle.textContent = state.settings.subtitle || '';
-        kicker.textContent = state.settings.studio || 'Diesel Dev Shack';
+        kicker.textContent = state.settings.studio || 'Phoenikera RP';
+        const tagline = document.getElementById('sidebar-tagline');
+        if (tagline) tagline.textContent = state.settings.tagline || 'Los Angeles · Desert Sunset';
+        const barBrand = document.getElementById('keybar-brand');
+        if (barBrand) barBrand.textContent = state.settings.studio || 'Phoenikera RP';
         if (!state.resourceStarted) {
             statusEl.textContent = 'RPEmotes is not running, so playback is unavailable. The catalog shown is whatever the server could read.';
             statusEl.classList.remove('is-hidden');
@@ -690,7 +695,8 @@
             settings: {
                 title: 'DJ ERP MENU',
                 subtitle: 'Choose an animation, pick a nearby player, and wait for them to accept.',
-                studio: 'Diesel Dev Shack',
+                studio: 'Phoenikera RP',
+                tagline: 'Los Angeles · Desert Sunset',
                 distance: 3,
                 timeout: 15,
                 cooldown: 8,

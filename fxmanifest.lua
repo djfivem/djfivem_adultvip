@@ -4,7 +4,7 @@ lua54 'yes'
 
 name 'dj-erp-menu'
 author 'Diesel Dev Shack'
-description 'DJ ERP Menu - paired adult roleplay interactions for RPEmotes'
+description 'DJ ERP Menu for Phoenikera RP - paired adult roleplay interactions for RPEmotes'
 version '1.0.0'
 
 ui_page 'html/index.html'

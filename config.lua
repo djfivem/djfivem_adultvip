@@ -11,11 +11,11 @@ Config.Keybind = 'F6'
 Config.CancelKey = 'X'
 
 Config.Branding = {
-    Studio = 'Diesel Dev Shack',
-    -- Matches the DJ ERP MENU concept. Change this if you want a different title.
+    Studio = 'Phoenikera RP',
+    -- Menu title. The server mark and sunset colors come from the Phoenikera RP logo.
     Title = 'DJ ERP MENU',
     Subtitle = 'Choose an animation, pick a nearby player, and wait for them to accept.',
-    Tagline = 'Premium FiveM roleplay resources',
+    Tagline = 'Los Angeles · Desert Sunset',
 }
 
 -- Metres. The server measures this itself and clamps admin edits to the max.

@@ -10,7 +10,7 @@ local function httpGet(url, token)
     end, 'GET', '', {
         ['Authorization'] = 'Bot ' .. token,
         ['Content-Type'] = 'application/json',
-        ['User-Agent'] = 'DJERPMenu (Diesel Dev Shack)',
+        ['User-Agent'] = 'DJERPMenu (Phoenikera RP)',
     })
     return Citizen.Await(pending)
 end
